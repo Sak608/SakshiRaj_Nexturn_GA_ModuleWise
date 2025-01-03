@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2>Manage Sales</h2>
+<form method="POST">
+    <input type="text" name="customer_name" placeholder="Customer Name" required>
+    <input type="text" name="book_title" placeholder="Book Title" required>
+    <input type="number" name="quantity" placeholder="Quantity" required>
+    <button type="submit">Sell Book</button>
+</form>
+<ul>
+    {% for sale in sales %}
+        <li>{{ sale.customer }} bought {{ sale.quantity }} of "{{ sale.book }}"</li>
+    {% endfor %}
+</ul>
+<canvas id="salesChart" width="400" height="200"></canvas>
+<!-- <script>
+    {% if sales_summary['books'] %}
+    var ctx = document.getElementById('salesChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: {{ sales_summary['books'] | tojson }},
+            datasets: [{
+                label: 'Total Sales',
+                data: {{ sales_summary['quantities'] | tojson }},
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    {% endif %}
+</script> -->
+{% endblock %}
