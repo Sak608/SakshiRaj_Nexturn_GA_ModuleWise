@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -88,4 +89,96 @@ h1{
     margin-top: 20px;
     font-size: 16px;
     color:red;
+=======
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4a772f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffdd00; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1{
+    margin: 0 0 20px;
+    font-size: 24px;
+    color:#a7095c; 
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#new-task {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#add-task {
+    padding: 10px 15px;
+    background-color: #fa9e05; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-task:hover {
+    background-color:darkorange;
+}
+
+#task-list {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    color:#a7095c; 
+}
+
+#task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background:#a7095c; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-item button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color:red;
+}
+.task-item.completed span {
+    text-decoration: line-through;
+    color:crimson;
+}
+.task-item button:hover {
+    color:red;
+}
+
+.task-summary {
+    margin-top: 20px;
+    font-size: 16px;
+    color:red;
+>>>>>>> 57b7dc5ce798bd88ebe3fc187d9051b5072f06d2
 }
