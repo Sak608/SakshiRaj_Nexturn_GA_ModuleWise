@@ -1,0 +1,117 @@
+Case Study: Git and GitHub Workflow Exercise
+
+Deliverable 1: Set Up the Project for Version Control
+
+1. Initialize a Local Git Repository
+
+Start by creating a directory for the project and navigating into it:
+mkdir sample-project
+cd sample-project
+git init
+
+2. Create a Repository on GitHub
+
+Log in to GitHub and create a new repository named sample-project.
+
+3. Connect the Local Repository to GitHub
+
+Copy the repository URL from GitHub and set it as the remote origin:
+git remote add origin https://github.com/your-username/sample-project.git
+
+4. Push the Initial Commit
+
+Optionally, add a placeholder file (like .gitignore), stage it, and make the first commit:
+git add .gitignore
+git commit -m "Initial commit: Set up project structure"
+
+Push the changes to the main branch:
+git branch -M main
+git push -u origin main
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deliverable 2: Create a New Branch and Add README.md
+
+1. Create a New Branch
+
+Create a branch called feature/update-readme and switch to it:
+git checkout -b feature/update-readme
+
+2. Add a README.md File
+
+Write the following content in a new README.md file:
+# Sample Project
+## Introduction
+This is a sample project for practicing Git and GitHub workflows. It serves as a foundation for collaboration, version control, and centralized code management.
+
+Save the file, then stage and commit the changes:
+git add README.md
+git commit -m "Add README.md file with project details"
+
+3. Push the Feature Branch to GitHub
+
+Push the branch to the remote repository:
+git push -u origin feature/update-readme
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deliverable 3: Merge the Feature Branch into the Main Branch
+
+1. Create a Pull Request
+
+Navigate to your repository on GitHub.
+Click the "Compare & pull request" button for the feature/update-readme branch.
+Add a short description of the changes, then submit the pull request.
+
+2. Merge the Pull Request
+
+Once the pull request has been reviewed and approved, merge it into the main branch by clicking "Merge pull request".
+Confirm the merge to complete the process.
+
+3. Update the Local Repository
+
+Switch back to the main branch locally and pull the changes:
+git checkout main
+git pull origin main
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Deliverable 4: Clean Up the Feature Branch
+
+1. Remove the Local Feature Branch
+
+Delete the branch locally with the following command:
+git branch -d feature/update-readme
+
+2. Remove the Remote Feature Branch
+
+Delete the branch from the remote repository:
+git push origin --delete feature/update-readme
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Key Questions Answered
+
+1. How will you set up the project for version control and push it to GitHub?
+
+-Initialize a Git repository locally using git init.
+-Create a corresponding repository on GitHub.
+-Link the local repository to GitHub using git remote add origin.
+-Stage, commit, and push the initial changes to the main branch with git push -u origin main.
+
+2. What steps will you take to create, push, and manage branches effectively?
+
+-Use git checkout -b <branch-name> to create and switch to a new branch.
+-After making changes, stage and commit them. Push the branch using git push -u origin <branch-name>.
+-Manage changes and reviews using GitHub's pull request functionality.
+
+3. How will you ensure the changes in the feature branch are merged into the main branch?
+
+-Submit a pull request from the feature branch on GitHub.
+-After review, merge the changes into the main branch through GitHub.
+-Pull the updated main branch locally using git pull.
+
+4. What commands will you use to clean up unused branches locally and remotely?
+
+-To delete a branch locally, use git branch -d <branch-name>.
+-To remove the branch remotely, use git push origin --delete <branch-name>.
