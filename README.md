@@ -1,1 +1,1 @@
-Nexturn module wise Graded Assessments
+Nexturn online training module wise Graded Assessments
